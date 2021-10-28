@@ -28,5 +28,8 @@ server.get("*", (req, res) => {
 // Listen for requests
 const PORT = process.env.PORT;
 server.listen(PORT, () => {
-  console.log(`Listening on port ${PORT}...`);
+  console.log(`
+    Link to site: http://localhost:${PORT}
+    Listening on port ${PORT}...
+  `);
 });
