@@ -9,7 +9,6 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: "Lance's Spot",
       filename: "index.html",
       template: "public/index.html",
     }),
