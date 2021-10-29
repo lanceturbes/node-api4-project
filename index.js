@@ -1,5 +1,5 @@
 // Use environment varibles from ".env"
-require("dotenv").config();
+// require("dotenv").config();
 
 // Import dependencies
 const path = require("path");
