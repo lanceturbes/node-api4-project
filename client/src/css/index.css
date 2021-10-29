@@ -1,3 +1,11 @@
-.app h1 {
-  text-transform: uppercase;
+body {
+  background-color: #2f2f2f;
+  color: #eee;
+  font-family: "Roboto", sans-serif;
+}
+
+.app {
+  margin: auto;
+  max-width: 600px;
+  padding: 1rem 0;
 }
