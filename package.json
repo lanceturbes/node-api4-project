@@ -4,8 +4,8 @@
   "description": "In this challenge, you will build a simple Express app and deploy it to Heroku.",
   "private": true,
   "scripts": {
-    "start": "node ./index.js",
-    "dev": "nodemon ./index.js",
+    "start": "node index.js",
+    "dev": "nodemon index.js",
     "heroku-postbuild": "cd client && npm i && npm run build"
   },
   "keywords": [],

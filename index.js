@@ -10,7 +10,7 @@ const app = express();
 
 // Use middleware
 app.use(express.json());
-app.use(express.static(path.join(__dirname, "./client/dist")));
+app.use(express.static(path.join(__dirname, "client/dist")));
 
 // Handle requests
 app.get("/api", (req, res) => {
@@ -23,7 +23,7 @@ app.get("/api", (req, res) => {
   });
 });
 app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "./client/dist", "index.html"));
+  res.sendFile(path.join(__dirname, "client/dist", "index.html"));
 });
 
 // Listen for requests
