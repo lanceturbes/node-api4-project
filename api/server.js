@@ -10,7 +10,7 @@ const server = express();
 
 // Use middleware
 server.use(express.json());
-server.use(express.static(path.join(__dirname, "client/dist")));
+server.use(express.static(path.join(__dirname, "../client/dist")));
 server.use("/api/login", loginRouter);
 server.use("/api/register", registerRouter);
 server.use("/api/users", usersRouter);
@@ -18,22 +18,11 @@ server.use("/api/users", usersRouter);
 // Handle requests
 server.get("/api", (req, res) => {
   res.status(200).json({
-    message: `
-    You've reached the API! 
-    
-    Here are the available endpoints:
-
-    | Method | URL           | Description                                                                                       |
-    | ------ | ------------- | ----------------------------------------------------------------------------------------------    |
-    | GET    | /api/users    | Returns an array users.                                                                           |
-    | POST   | /api/register | Creates a user from { username, password } in the request body, responds with newly created user. |
-    | POST   | /api/login    | Checks { username, password } in the request body, responds with a welcome message.               |
-
-  `,
+    message: `You've reached the API!`,
   });
 });
 server.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "client/dist", "index.html"));
+  res.sendFile(path.join(__dirname, "../client/dist", "index.html"));
 });
 
 // Exports
