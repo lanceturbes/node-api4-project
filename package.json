@@ -16,11 +16,11 @@
     "nodemon": "^2.0.14"
   },
   "dependencies": {
-    "dotenv": "^10.0.0",
     "cors": "^2.8.5",
     "express": "^4.17.1"
   },
   "engines": {
+    "dotenv": "^10.0.0",
     "node": "16.x",
     "npm": "8.x"
   }
