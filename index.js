@@ -6,14 +6,14 @@ const path = require("path");
 const express = require("express");
 
 // Declare server
-const server = express();
+const app = express();
 
 // Use middleware
-server.use(express.json());
-server.use(express.static(path.join(__dirname, "client/dist")));
+app.use(express.json());
+app.use(express.static(path.join(__dirname, "client/dist")));
 
 // Handle requests
-server.get("/api", (req, res) => {
+app.get("/api", (req, res) => {
   res.status(200).json({
     message: `
     You've reached the API! 
@@ -22,13 +22,13 @@ server.get("/api", (req, res) => {
   `,
   });
 });
-server.get("*", (req, res) => {
+app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "client/dist", "index.html"));
 });
 
 // Listen for requests
 const PORT = process.env.PORT;
-server.listen(PORT, () => {
+app.listen(PORT, () => {
   console.log(`
     Link to site: http://localhost:${PORT}
     Listening on port ${PORT}...
